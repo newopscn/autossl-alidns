@@ -1,0 +1,10 @@
+#!/bin/bash
+
+domain=$1
+
+if [ -z $domain ];then
+	echo "No domain name found!"
+	exit 1
+fi
+
+/usr/local/bin/certbot certonly --manual --preferred-challenges=dns --manual-auth-hook /usr/src/app/authenticator.sh -d $domain
