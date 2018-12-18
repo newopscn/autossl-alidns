@@ -1,5 +1,10 @@
 # letsencrypt auto renewal by dns challenge
 
+使用条件:
+
+1. 只支持digi-sky.com
+2. 已经有dns记录存在
+
 ## env
 
 * ALI_SECRET_ID=
