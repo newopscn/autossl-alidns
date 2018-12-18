@@ -35,3 +35,11 @@ certbot renew --force-renewal
 ```bash
 docker run -it --rm --name alidns -e ALI_SECRET_ID=xxx -e ALI_SECRET_KEY=xxx -v /data/ssl/:/etc/letsencrypt/ hub.digi-sky.com/base/alidns:1.0.0
 ```
+
+## renewal cron
+
+```bash
+$ crontab -l
+
+00 09 01 * * /root/cron/update_cert_cron.sh # 每月定时重新签发一次证书
+```
